@@ -1,0 +1,52 @@
+{
+    "creator": "Grand Homie",
+    "description": "4v4 unshared map. 4 spawns in a spiral. Preferred to play with 4v4 NS.",
+    "players": [
+        8,
+        8
+    ],
+    "name": "Spiral 4v4 NS NEW",
+    "info": {
+        "planetCSG": [
+            {
+                "rotation": 0,
+                "spec": {
+                    "height": 0.0,
+                    "size": 500,
+                    "material": "metal",
+                    "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "type_info": "add"
+                }
+            }
+        ],
+        "planet": {
+            "waterHeight": 0,
+            "metalClusters": 50,
+            "biome": "earth",
+            "biomeScale": 50,
+            "metalDensity": 50,
+            "radius": 500,
+            "temperature": 100,
+            "metalSpotLimit": 0,
+            "waterDepth": 100,
+            "mass": 10000,
+            "heightRange": 10
+        },
+        "source": {
+            "metal_spot_size": 4,
+            "reclaim_metal_spots": 4,
+            "reclaim_metal_spot_size": 4,
+            "metal_spots_density": 0.5,
+            "reclaim_metal_spots_density": 0.5,
+            "metal_spots": 4
+        },
+        "balanced": true,
+        "scale": 1,
+        "symmetrical": true
+    },
+    "version": "1.0"
+}
