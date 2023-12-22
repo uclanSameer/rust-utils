@@ -9,6 +9,7 @@ pub fn json_to_struct(in_file_name: &str, struct_name: &str) {
     let struct_file_name = struct_name.to_string() + ".rs";
     let _file = std::fs::File::create(&struct_file_name).unwrap();
 
+    // open file in append mode
     let mut file = std::fs::OpenOptions::new()
         .append(true)
         .open(&struct_file_name)
@@ -108,7 +109,7 @@ fn for_object(k: &String, v: &Value, file: &mut File, struct_map: &mut HashMap<S
  * eg: {"players": [1, 2, 3]}
  *
  * output:
- *  struct Players {
+ *  struct NameOfStruct {
  *     players: Vec<i64>
  *}
  */
