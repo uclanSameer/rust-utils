@@ -9,6 +9,12 @@ pub fn create_thumbnail() {
     // read image file
     let img = ImageReader::open(&args.image);
 
+    println!("Image name: {:?}", args);
+    let out_name = match args.output {
+        Some(name) => name,
+        None => "thumbnail.png".to_string(),
+    };
+
     match img {
         Ok(img) => {
             let thumbnail = img.decode();
@@ -16,10 +22,10 @@ pub fn create_thumbnail() {
                 Ok(thumbnail) => {
                     let thumbnail = thumbnail.thumbnail(50, 50);
                     // save the thumbnail
-                    let save = thumbnail.save("thumbnail.png");
+                    let save = thumbnail.save(&out_name);
                     match save {
                         Ok(_) => {
-                            println!("Thumbnail created successfully");
+                            println!("Thumbnail created successfully with name: {}", out_name);
                         }
                         Err(err) => {
                             println!("Error creating thumbnail: {}", err);
@@ -35,5 +41,5 @@ pub fn create_thumbnail() {
             println!("Error reading image: {}", err);
         }
     }
-
 }
+
